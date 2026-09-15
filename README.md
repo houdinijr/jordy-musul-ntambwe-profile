@@ -1,42 +1,35 @@
-# Prompt Log — About Section Content
+# Jordy Musul  — Mini-Portfolio
 
-## 1. My Prompt
+A one-page semantic HTML5 profile and mini-portfolio website built as coursework 
+for Unit II, showcasing my background, projects, and a working contact form.
 
-Context: I am a second-year Software Egeneering student building a one-page personal 
-portfolio website. I am passionate about front-end development, problem-solving, 
-and I enjoy hiking and cooking in my free time.
-Goal: Write a short, professional "About Me" bio for the About section of my 
-portfolio, plus one short tagline for my header.
-Constraints: Keep the bio to 3-4 sentences, friendly but professional tone, avoid 
-generic buzzwords like "passionate go-getter", mention that I am eager to grow 
-as a developer.
-Format: Give me the tagline on one line, then the bio as a separate paragraph.
+## 🔗 Prompt Log
 
-## 2. AI's Raw Output
+See [PROMPT_LOG.md](./PROMPT_LOG.md) for the full AI prompt, raw output, edited 
+final version, and reflection used to write the About section content.
 
-Tagline: "Passionate Front-End Developer in the Making"
+## ♿ Accessibility: Peer Review Issue & Fix
 
-Bio: "I am a passionate and driven Software Egeneering student with a keen interest 
-in front-end development. I love solving problems and building creative digital 
-experiences. In my free time, I enjoy hiking and cooking, which help me stay 
-balanced and inspired. I am eager to grow my skills and become a well-rounded 
-developer."
+**Issue found by peer reviewer (Thursday's practical session):**
+My peer, [nom du camarade si tu veux le citer], pointed out that the project 
+screenshot image in my Projects section had no `alt` attribute at all, meaning 
+a screen reader user would have no idea what the image contained or that it 
+was even there.
 
-## 3. My Final Edited Version
+**Fix applied:**
+I added descriptive `alt` text to every image on the page, for example: 
+`alt="Screenshot of the budget tracker app dashboard showing monthly expense charts"`. 
+For any purely decorative images I would use `alt=""` instead, but in this case 
+all my images are meaningful content, so they now have full descriptions.
 
-Tagline: "Turning ideas into interactive web experiences."
+## 🛠️ Built With
 
-Bio: "I'm a second-year Software Egeneering student who genuinely enjoys turning a 
-blank page into a working website. Front-end development is where I feel most 
-creative, and I'm currently sharpening my HTML, CSS and JavaScript skills. 
-Outside of coding, you'll usually find me hiking a local trail or experimenting 
-in the kitchen."
+- HTML5 (semantic elements)
+- Native HTML5 form validation (no JavaScript)
+- AI-assisted content drafting (Claude)
 
-## 4. Reflection
+## 📁 Project Structure
 
-I changed the tagline because the AI's version felt generic and overused ("passionate... 
-in the making" sounds like a template phrase seen everywhere). I rewrote the bio to 
-remove the buzzword "passionate and driven" which the AI used despite my constraint, 
-and I added a more specific, personal detail about "turning a blank page into a 
-working website" to make it sound like an actual person rather than a generic 
-LinkedIn summary. I also tightened the sentence about hobbies to flow more naturally.
+- `index.html` — main page
+- `README.md` — this file
+- `PROMPT_LOG.md` — AI prompt documentation
