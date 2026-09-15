@@ -7,91 +7,131 @@
     <title>Jordy Musul | Mini-Portfolio</title>
 </head>
 <body>
-<header>
-    <h1>Jordy Musul</h1>
-    <p class="tagline">Aspiring Front-End Developer | Problem Solver | Lifelong Learner</p>
-</header>
-<nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-<main> 
-    <section id="contact">
-        <h2>Contact Me</h2>
 
-        <form action="#" method="post">
+    <header>
+        <h1>Jordy Musul</h1>
+        <p class="tagline">Aspiring Front-End Developer | Problem Solver | Lifelong Learner</p>
+    </header>
 
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    required 
-                    minlength="2" 
-                    placeholder="e.g. Jean Dupont">
-            </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    required 
-                    placeholder="e.g. jean.dupont@email.com">
-            </div>
+    <main>
 
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    pattern="[0-9]{10}" 
-                    placeholder="e.g. 0821234567"
-                    title="Please enter a 10-digit phone number">
-            </div>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm a second-year Computer Science student who genuinely enjoys turning a 
+                blank page into a working website. Front-end development is where I feel most 
+                creative, and I'm currently sharpening my HTML, CSS and JavaScript skills. 
+                Outside of coding, you'll usually find me hiking a local trail or experimenting 
+                in the kitchen.
+            </p>
+        </section>
 
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <select id="subject" name="subject" required>
-                    <option value="">-- Please choose an option --</option>
-                    <option value="job">Job Opportunity</option>
-                    <option value="collaboration">Collaboration</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
+        <section id="projects">
+            <h2>My Projects</h2>
 
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="5" 
-                    required 
-                    minlength="10" 
-                    placeholder="Write your message here..."></textarea>
-            </div>
+            <article>
+                <h3>Smart Hostel Access & Room Key System (SHARKS)</h3>
+                <img src="images/Panel Design.jpg" alt="Panel design of the Smart LED Key Panel used in the SHARKS access system">
+                <p>
+                    A smart access control system designed to modernise hostel room security using 
+                    an LED key panel and a dedicated scanning device, allowing residents to unlock 
+                    their rooms without a traditional physical key.
+                </p>
+                <img src="images/The SHARKS Scanning Device.jpg" alt="The SHARKS scanning device used to authenticate and grant room access">
+                <p>
+                    The scanning device authenticates each resident and communicates with the panel 
+                    to grant or deny access in real time, improving both convenience and security 
+                    compared to traditional lock-and-key systems.
+                </p>
+            </article>
 
-            <button type="submit">Send Message</button>
+        </section>
 
-        </form>
-    </section>
-    <aside>
-        <h2>Fun Fact</h2>
-        <p>When I'm not coding, I'm usually experimenting with new recipes or hiking local trails.</p>
-    </aside>
-</main>
-<footer>
-    <p>&copy; 2025 Jean Dupont. All rights reserved.</p>
-    <p>
-        <a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noopener">LinkedIn</a> |
-        <a href="https://github.com/tonusername" target="_blank" rel="noopener">GitHub</a>
-    </p>
-</footer>
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required 
+                        minlength="2" 
+                        placeholder="e.g. Jordy Musul">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="e.g. jordymusul@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        pattern="[0-9]{10}" 
+                        placeholder="e.g. 0821234567"
+                        title="Please enter a 10-digit phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Please choose an option --</option>
+                        <option value="job">Job Opportunity</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5" 
+                        required 
+                        minlength="10" 
+                        placeholder="Write your message here..."></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+        </section>
+
+        <aside>
+            <h2>Fun Fact</h2>
+            <p>When I'm not coding, I'm usually experimenting with new recipes or hiking local trails.</p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jordy Musul. All rights reserved.</p>
+        <p>
+            <a href="https://linkedin.com/in/jordymusul" target="_blank" rel="noopener">LinkedIn</a> |
+            <a href="https://github.com/jordymusul" target="_blank" rel="noopener">GitHub</a>
+        </p>
+    </footer>
+
 </body>
 </html>
