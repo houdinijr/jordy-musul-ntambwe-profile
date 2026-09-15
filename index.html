@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal profile and mini-portfolio page of Jordy Musul, aspiring web developer.">
+    <meta
+        name="description"
+        content="Personal profile and mini-portfolio of Jordy Musul, a second-year Software Engineering student interested in front-end development."
+    >
     <title>Jordy Musul | Mini-Portfolio</title>
 </head>
+
 <body>
 
     <header>
         <h1>Jordy Musul</h1>
-        <p class="tagline">Aspiring Front-End Developer | Problem Solver | Lifelong Learner</p>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <p class="tagline">
+            Turning ideas into interactive web experiences.
+        </p>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
 
         <section id="about">
             <h2>About Me</h2>
+
             <p>
-                I'm a second-year Computer Science student who genuinely enjoys turning a 
-                blank page into a working website. Front-end development is where I feel most 
-                creative, and I'm currently sharpening my HTML, CSS and JavaScript skills. 
-                Outside of coding, you'll usually find me hiking a local trail or experimenting 
+                I'm a second-year Software Engineering student who genuinely
+                enjoys turning a blank page into a working website. Front-end
+                development is where I feel most creative, and I'm currently
+                sharpening my HTML, CSS and JavaScript skills. Outside of coding,
+                you'll usually find me hiking a local trail or experimenting
                 in the kitchen.
             </p>
         </section>
@@ -38,79 +48,120 @@
             <h2>My Projects</h2>
 
             <article>
-                <h3>Smart Hostel Access & Room Key System (SHARKS)</h3>
-                <img src="images/Panel Design.jpg" alt="Panel design of the Smart LED Key Panel used in the SHARKS access system">
+                <h3>Smart Hostel Access &amp; Room Key System (SHARKS)</h3>
+
+                <figure>
+                    <img
+                        src="images/panel-design.jpg"
+                        alt="Panel design of the Smart LED Key Panel used in the SHARKS access system"
+                    >
+                    <figcaption>
+                        Panel Design (Smart LED Key Panel)
+                    </figcaption>
+                </figure>
+
                 <p>
-                    A smart access control system designed to modernise hostel room security using 
-                    an LED key panel and a dedicated scanning device, allowing residents to unlock 
-                    their rooms without a traditional physical key.
+                    The Smart Hostel Access &amp; Room Key System is designed
+                    to modernise hostel room security using an LED key panel
+                    and a dedicated scanning device. The system allows
+                    residents to access their rooms without relying on a
+                    traditional physical key.
                 </p>
-                <img src="images/The SHARKS Scanning Device.jpg" alt="The SHARKS scanning device used to authenticate and grant room access">
+
+                <figure>
+                    <img
+                        src="images/sharks-scanning-device.jpg"
+                        alt="SHARKS scanning device used to authenticate residents and grant room access"
+                    >
+                    <figcaption>
+                        The SHARKS Scanning Device
+                    </figcaption>
+                </figure>
+
                 <p>
-                    The scanning device authenticates each resident and communicates with the panel 
-                    to grant or deny access in real time, improving both convenience and security 
-                    compared to traditional lock-and-key systems.
+                    The scanning device authenticates each resident and
+                    communicates with the panel to grant or deny access.
+                    This approach is intended to improve convenience and
+                    security compared with traditional lock-and-key systems.
                 </p>
             </article>
-
         </section>
 
         <section id="contact">
             <h2>Contact Me</h2>
 
+            <p>
+                If you would like to discuss a project, collaboration,
+                or opportunity, you can contact me using the form below.
+            </p>
+
             <form action="#" method="post">
 
                 <div class="form-group">
                     <label for="name">Full Name:</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        required 
-                        minlength="2" 
-                        placeholder="e.g. Jordy Musul">
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        minlength="2"
+                        autocomplete="name"
+                        placeholder="e.g. Jordy Musul"
+                    >
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address:</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        required 
-                        placeholder="e.g. jordymusul@email.com">
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        placeholder="e.g. jordymusul@email.com"
+                    >
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number:</label>
-                    <input 
-                        type="tel" 
-                        id="phone" 
-                        name="phone" 
-                        pattern="[0-9]{10}" 
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        pattern="[0-9]{10}"
+                        autocomplete="tel"
                         placeholder="e.g. 0821234567"
-                        title="Please enter a 10-digit phone number">
+                        title="Please enter a 10-digit phone number"
+                    >
                 </div>
 
                 <div class="form-group">
                     <label for="subject">Subject:</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">-- Please choose an option --</option>
+                    <select
+                        id="subject"
+                        name="subject"
+                        required
+                    >
+                        <option value="">
+                            -- Please choose an option --
+                        </option>
                         <option value="job">Job Opportunity</option>
                         <option value="collaboration">Collaboration</option>
+                        <option value="project">Project Enquiry</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="message">Your Message:</label>
-                    <textarea 
-                        id="message" 
-                        name="message" 
-                        rows="5" 
-                        required 
-                        minlength="10" 
-                        placeholder="Write your message here..."></textarea>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                        minlength="10"
+                        placeholder="Write your message here..."
+                    ></textarea>
                 </div>
 
                 <button type="submit">Send Message</button>
@@ -120,18 +171,29 @@
 
         <aside>
             <h2>Fun Fact</h2>
-            <p>When I'm not coding, I'm usually experimenting with new recipes or hiking local trails.</p>
+
+            <p>
+                When I'm not coding, I'm usually experimenting with new
+                recipes or hiking local trails.
+            </p>
         </aside>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 Jordy Musul. All rights reserved.</p>
         <p>
-            <a href="https://linkedin.com/in/jordymusul" target="_blank" rel="noopener">LinkedIn</a> |
-            <a href="https://github.com/jordymusul" target="_blank" rel="noopener">GitHub</a>
+            &copy; 2026 Jordy Musul. All rights reserved.
+        </p>
+
+        <p>
+            <a
+                href="https://github.com/houdinijr"
+                target="_blank"
+                rel="noopener"
+            >GitHub</a>
         </p>
     </footer>
 
 </body>
+
 </html>
