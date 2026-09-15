@@ -3,17 +3,432 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <meta
         name="description"
         content="Personal profile and mini-portfolio of Jordy Musul, a second-year Software Engineering student interested in front-end development."
     >
+
     <title>Jordy Musul | Mini-Portfolio</title>
+
+    <style>
+        /* =========================
+           BASIC RESET
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f8fafc;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #0f172a;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            padding: 70px 20px 35px;
+            text-align: center;
+            background-color: #0f172a;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .tagline {
+            margin: 12px 0 30px;
+            color: #cbd5e1;
+            font-size: 1.15rem;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        nav a {
+            display: inline-block;
+
+            padding: 9px 18px;
+
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+
+            border: 1px solid #475569;
+            border-radius: 8px;
+
+            transition:
+                background-color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #2563eb;
+            border-color: #2563eb;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 70px 10%;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        #about {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 760px;
+            margin: auto;
+
+            color: #475569;
+            font-size: 1.05rem;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        #projects {
+            background-color: #eaf0f7;
+        }
+
+        #projects > h2 {
+            text-align: center;
+        }
+
+        #projects article {
+            max-width: 1000px;
+            margin: auto;
+            padding: 35px;
+
+            background-color: white;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 18px rgba(15, 23, 42, 0.1);
+        }
+
+        #projects h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        figure {
+            margin: 35px auto;
+            text-align: center;
+        }
+
+        figure img {
+            display: block;
+
+            width: 650px;
+            max-width: 100%;
+            height: auto;
+
+            margin: auto;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        figcaption {
+            margin-top: 10px;
+
+            color: #475569;
+
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        #contact {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        #contact h2 {
+            text-align: center;
+        }
+
+        #contact > p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+
+            text-align: center;
+            color: #475569;
+        }
+
+        form {
+            padding: 35px;
+
+            background-color: white;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 18px rgba(15, 23, 42, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #0f172a;
+
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 12px 14px;
+
+            font-family: inherit;
+            font-size: 1rem;
+
+            color: #1f2937;
+            background-color: white;
+
+            border: 1px solid #94a3b8;
+            border-radius: 7px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid rgba(37, 99, 235, 0.25);
+            border-color: #2563eb;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 13px 20px;
+
+            background-color: #2563eb;
+            color: white;
+
+            border: none;
+            border-radius: 7px;
+
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.1s ease;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #1d4ed8;
+        }
+
+        button:active {
+            transform: scale(0.99);
+        }
+
+
+        /* =========================
+           FUN FACT
+        ========================== */
+
+        aside {
+            max-width: 800px;
+
+            margin: 20px auto 70px;
+            padding: 25px;
+
+            background-color: #eff6ff;
+
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+        }
+
+        aside h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+
+            font-size: 1.5rem;
+        }
+
+        aside p {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background-color: #0f172a;
+            color: #cbd5e1;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            color: white;
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 50px 20px 30px;
+            }
+
+            header h1 {
+                font-size: 2.3rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                width: 190px;
+            }
+
+            section {
+                padding: 50px 20px;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            #projects article {
+                padding: 22px;
+            }
+
+            form {
+                padding: 22px;
+            }
+
+            aside {
+                margin: 10px 20px 50px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
+
         <h1>Jordy Musul</h1>
 
         <p class="tagline">
@@ -22,43 +437,65 @@
 
         <nav aria-label="Main navigation">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
         </nav>
+
     </header>
 
+
+    <!-- MAIN CONTENT -->
     <main>
 
+        <!-- ABOUT SECTION -->
         <section id="about">
+
             <h2>About Me</h2>
 
             <p>
                 I'm a second-year Software Engineering student who genuinely
-                enjoys turning a blank page into a working website. Front-end
-                development is where I feel most creative, and I'm currently
-                sharpening my HTML, CSS and JavaScript skills. Outside of coding,
-                you'll usually find me hiking a local trail or experimenting
-                in the kitchen.
+                enjoys turning a blank page into a working website.
+                Front-end development is where I feel most creative, and
+                I'm currently sharpening my HTML, CSS and JavaScript skills.
+                Outside of coding, you'll usually find me hiking a local
+                trail or experimenting in the kitchen.
             </p>
+
         </section>
 
+
+        <!-- PROJECTS SECTION -->
         <section id="projects">
+
             <h2>My Projects</h2>
 
             <article>
-                <h3>Smart Hostel Access &amp; Room Key System (SHARKS)</h3>
+
+                <h3>
+                    Smart Hostel Access &amp; Room Key System (SHARKS)
+                </h3>
 
                 <figure>
+
                     <img
                         src="images/Panel-Design.jpeg"
                         alt="Panel design of the Smart LED Key Panel used in the SHARKS access system"
-                        width="500"
                     >
+
                     <figcaption>
                         Panel Design (Smart LED Key Panel)
                     </figcaption>
+
                 </figure>
 
                 <p>
@@ -70,14 +507,16 @@
                 </p>
 
                 <figure>
+
                     <img
                         src="images/The-SHARKS-Scanning-Device.jpeg"
                         alt="SHARKS scanning device used to authenticate residents and grant room access"
-                        width="500"
                     >
+
                     <figcaption>
                         The SHARKS Scanning Device
                     </figcaption>
+
                 </figure>
 
                 <p>
@@ -86,10 +525,15 @@
                     This approach is intended to improve convenience and
                     security compared with traditional lock-and-key systems.
                 </p>
+
             </article>
+
         </section>
 
+
+        <!-- CONTACT SECTION -->
         <section id="contact">
+
             <h2>Contact Me</h2>
 
             <p>
@@ -99,8 +543,13 @@
 
             <form action="#" method="post">
 
+                <!-- FULL NAME -->
                 <div class="form-group">
-                    <label for="name">Full Name:</label>
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
                     <input
                         type="text"
                         id="name"
@@ -110,10 +559,17 @@
                         autocomplete="name"
                         placeholder="e.g. Jordy Musul"
                     >
+
                 </div>
 
+
+                <!-- EMAIL -->
                 <div class="form-group">
-                    <label for="email">Email Address:</label>
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
                     <input
                         type="email"
                         id="email"
@@ -122,10 +578,17 @@
                         autocomplete="email"
                         placeholder="e.g. jordymusul@email.com"
                     >
+
                 </div>
 
+
+                <!-- PHONE -->
                 <div class="form-group">
-                    <label for="phone">Phone Number:</label>
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
                     <input
                         type="tel"
                         id="phone"
@@ -135,27 +598,55 @@
                         placeholder="e.g. 0821234567"
                         title="Please enter a 10-digit phone number"
                     >
+
                 </div>
 
+
+                <!-- SUBJECT -->
                 <div class="form-group">
-                    <label for="subject">Subject:</label>
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
                     <select
                         id="subject"
                         name="subject"
                         required
                     >
+
                         <option value="">
                             -- Please choose an option --
                         </option>
-                        <option value="job">Job Opportunity</option>
-                        <option value="collaboration">Collaboration</option>
-                        <option value="project">Project Enquiry</option>
-                        <option value="other">Other</option>
+
+                        <option value="job">
+                            Job Opportunity
+                        </option>
+
+                        <option value="collaboration">
+                            Collaboration
+                        </option>
+
+                        <option value="project">
+                            Project Enquiry
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
                     </select>
+
                 </div>
 
+
+                <!-- MESSAGE -->
                 <div class="form-group">
-                    <label for="message">Your Message:</label>
+
+                    <label for="message">
+                        Your Message
+                    </label>
+
                     <textarea
                         id="message"
                         name="message"
@@ -164,25 +655,38 @@
                         minlength="10"
                         placeholder="Write your message here..."
                     ></textarea>
+
                 </div>
 
-                <button type="submit">Send Message</button>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit">
+                    Send Message
+                </button>
 
             </form>
+
         </section>
 
+
+        <!-- ASIDE -->
         <aside>
+
             <h2>Fun Fact</h2>
 
             <p>
-                When I'm not coding, I'm usually experimenting with new
-                recipes or hiking local trails.
+                When I'm not coding, I'm usually experimenting with
+                new recipes or hiking local trails.
             </p>
+
         </aside>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
+
         <p>
             &copy; 2026 Jordy Musul. All rights reserved.
         </p>
@@ -192,8 +696,11 @@
                 href="https://github.com/houdinijr"
                 target="_blank"
                 rel="noopener"
-            >GitHub</a>
+            >
+                GitHub
+            </a>
         </p>
+
     </footer>
 
 </body>
